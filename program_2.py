@@ -1,4 +1,6 @@
 # Program #2: Word Separator
+#3/20/26
+#Josiah Hendley
 # Write a program that accepts as input a sentence in which all of the words are run together, 
 # but the first character of each word is uppercase.  
 # Convert the sentence to a string in which the words are separated by spaces, 
@@ -11,6 +13,13 @@ def word_separator(sentence):
 
     new_sentence = ""
     #    Add your logic here
+    for i, char in enumerate(sentence):
+        if i == 0:
+            new_sentence += char 
+        elif char.isupper():
+            new_sentence += " " + char.lower()
+        else:
+            new_sentence += char
 
     return new_sentence.strip()
 
